@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacialRecognization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-wl-z0W">
+                                <rect key="frame" x="31" y="89" width="331" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get Image">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rvm-dP-fiY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-Uu-ia7">
+                                <rect key="frame" x="31" y="160" width="331" height="506"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZD4-7s-Y4t">
+                                <rect key="frame" x="31" y="702" width="331" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="cJc-TQ-Pki"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dYL-wl-z0W" firstAttribute="leading" secondItem="bYb-Uu-ia7" secondAttribute="leading" id="46U-hx-w45"/>
+                            <constraint firstItem="dYL-wl-z0W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ACc-TC-62V"/>
+                            <constraint firstItem="dYL-wl-z0W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M9U-Mt-2Mv"/>
+                            <constraint firstItem="ZD4-7s-Y4t" firstAttribute="top" secondItem="bYb-Uu-ia7" secondAttribute="bottom" constant="36" id="QLB-HN-pas"/>
+                            <constraint firstItem="dYL-wl-z0W" firstAttribute="trailing" secondItem="bYb-Uu-ia7" secondAttribute="trailing" id="Svo-xf-YaJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZD4-7s-Y4t" secondAttribute="bottom" constant="31" id="T2M-fo-2Mo"/>
+                            <constraint firstItem="bYb-Uu-ia7" firstAttribute="top" secondItem="dYL-wl-z0W" secondAttribute="bottom" constant="36" id="ULG-Qh-TG9"/>
+                            <constraint firstItem="bYb-Uu-ia7" firstAttribute="trailing" secondItem="ZD4-7s-Y4t" secondAttribute="trailing" id="VqS-C6-6r2"/>
+                            <constraint firstItem="dYL-wl-z0W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="cK7-kr-zRu"/>
+                            <constraint firstItem="bYb-Uu-ia7" firstAttribute="leading" secondItem="ZD4-7s-Y4t" secondAttribute="leading" id="sFh-ez-PdI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="ZD4-7s-Y4t" id="ESG-Ho-SIf"/>
+                        <outlet property="pictureChoose" destination="bYb-Uu-ia7" id="URQ-C5-UiT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
